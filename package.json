@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test" : "npx playwright test /tests/POPractice1.spec.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.25.1"
+    "@playwright/test": "^1.25.2",
+    "allure-playwright": "^2.0.0-beta.19"
   }
 }

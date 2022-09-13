@@ -2,6 +2,13 @@ const { test } = require('@playwright/test');
 const { POManager } = require('../pageobjects/POManager');
 const dataset = JSON.parse(JSON.stringify(require("../utils/POPracticeTestData.json")));
 
+//parallel mode means that all tests within the file will be run on seperate instances.
+//test.describe.configure({mode : 'parallel'});
+
+//serial mode means that all tests within the file are considered interdependant. 
+//So if one test fails the execution will be stopped to save time.
+//test.describe.configure({mode : 'serial'});
+
 for (const data of dataset) {
     test(`E2E for ${data.productName}`, async ({ page }) => {
 

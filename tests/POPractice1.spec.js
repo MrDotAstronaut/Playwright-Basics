@@ -2,7 +2,7 @@ const { test } = require("../utils/TestBase");
 const { POManager } = require('../pageobjects/POManager');
 const dataset = JSON.parse(JSON.stringify(require("../utils/POPracticeTestData.json")));
 
-test('E2E', async ({ page, testDataForOrder }) => {
+test('@Web E2E', async ({ page, testDataForOrder }) => {
 
     const pom = new POManager(page, testDataForOrder.productName);
     const lp = pom.getLoginPage();
